@@ -28,6 +28,11 @@ public class EmployeeResource {
 		List<Employee> employees = employeeService.findAllEmployees();
 		return new ResponseEntity<>(employees, HttpStatus.OK);
 	}
+	@GetMapping("/num")
+	public ResponseEntity<?> getNumOfEmployees(){
+		Long  employees = employeeService.getNumOfEmployees();
+		return new ResponseEntity<>(employees, HttpStatus.OK);
+	}
 	
 	@GetMapping("/find/{id}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long id ){

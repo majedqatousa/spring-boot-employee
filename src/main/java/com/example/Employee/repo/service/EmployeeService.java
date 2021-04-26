@@ -25,7 +25,9 @@ public class EmployeeService {
 	public List<Employee> findAllEmployees(){
 		return employeeRepo.findAll();
 	}
-	
+	public Long getNumOfEmployees() {
+		return employeeRepo.count();
+	}
 	public Employee updateEmployee(Employee employee){
 		return employeeRepo.save(employee);
 	}
