@@ -10,6 +10,7 @@ import com.example.Employee.model.Employee;
 public interface EmployeeRepo extends JpaRepository<Employee, Long>{
 	
 	void deleteEmployeeById(Long id); 
+	
 	Optional<Employee> findEmployeeById(Long id);
 
 }
